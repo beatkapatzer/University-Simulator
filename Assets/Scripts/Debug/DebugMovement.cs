@@ -25,4 +25,6 @@ public class DebugMovement : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
     }
+
+
 }
