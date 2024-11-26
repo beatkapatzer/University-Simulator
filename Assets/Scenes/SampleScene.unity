@@ -3523,7 +3523,7 @@ GameObject:
   - component: {fileID: 885098633}
   - component: {fileID: 885098632}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: FinishLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
