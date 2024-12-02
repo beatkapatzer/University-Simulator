@@ -22,22 +22,22 @@ public class FlyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
         xRotation = freelookCamera.transform.rotation.eulerAngles.x;
 
 
-        if (Input.GetKey(KeyCode.W))
-        {
-            MoveCharacter();
-        }
-        else
-        {
-            DisableMovent();
-        }
+       if(Input.GetKey(KeyCode.W))
+       {
+        MoveCharacter();
+       } 
+       else
+       {
+        DisableMovent();
+       }
 
-        currentHeight = Mathf.Clamp(transform.position.y, currentHeight, maxFloatHeight);
-        transform.position = new Vector3(transform.position.x, currentHeight, transform.position.z);
-
+       currentHeight = Mathf.Clamp(transform.position.y, currentHeight, maxFloatHeight);
+       transform.position = new Vector3(transform.position.x, currentHeight, transform.position.z);
+  
     }
 
     private void MoveCharacter()
@@ -46,7 +46,7 @@ public class FlyController : MonoBehaviour
         transform.rotation = Quaternion.LookRotation(cameraForward);
         transform.Rotate(new Vector3(xRotation, 0, 0), Space.Self);
 
-
+        
 
         Vector3 forward = freelookCamera.transform.forward;
         Vector3 flyDirection = forward.normalized;
@@ -57,12 +57,12 @@ public class FlyController : MonoBehaviour
         transform.position += flyDirection * moveSpeed * Time.deltaTime;
         transform.position = new Vector3(transform.position.x, currentHeight, transform.position.z);
 
-
+        
     }
 
     private void DisableMovent()
     {
-
+       
         transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
 
     }
