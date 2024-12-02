@@ -1,4 +1,5 @@
 
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class DebugMovement : MonoBehaviour
@@ -26,4 +27,6 @@ public class DebugMovement : MonoBehaviour
 
         //ffff
     }
+
+       
 }
