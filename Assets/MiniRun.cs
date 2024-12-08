@@ -62,7 +62,7 @@ public class MiniRun : MonoBehaviour
         isSwitchingLanes = false;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "Obstacle")
         {
@@ -72,7 +72,7 @@ public class MiniRun : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Finish")
         {
-            Debug.Log("You Win!");
+            Debug.LogError("You Win!");
             // Add logic for winning the game, e.g., loading the next level or showing a win screen
         }
     }
