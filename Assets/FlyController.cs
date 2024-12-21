@@ -10,6 +10,8 @@ public class FlyController : MonoBehaviour
     private float currentHeight;
     private Animation anim;
     private float xRotation;
+    [SerializeField] private float fallspeed;
+
     void Start()
     {
         currentHeight = transform.position.y;
@@ -35,9 +37,8 @@ public class FlyController : MonoBehaviour
         DisableMovent();
        }
 
-       currentHeight = Mathf.Clamp(transform.position.y, currentHeight, maxFloatHeight);
-       transform.position = new Vector3(transform.position.x, currentHeight, transform.position.z);
-  
+        transform.position -= new Vector3(0, fallspeed * Time.deltaTime ,0);
+
     }
 
     private void MoveCharacter()

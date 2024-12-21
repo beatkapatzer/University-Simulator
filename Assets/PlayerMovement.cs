@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     public float JumpForce;
     public bool InSprint;
 
+    public bool MovementAllowed;
+
     float Horizontal;
     float Vertical;
 
@@ -22,18 +24,22 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        IsGrounded = Physics.CheckSphere(new Vector3(transform.position.x, transform.position.y - 1.7f, transform.position.z), 0.5f, GroundMask);
 
-        if (InSprint == true)
+        IsGrounded = Physics.CheckSphere(new Vector3(transform.position.x, transform.position.y - 1.7f, transform.position.z), 0.5f, GroundMask);
+        if(MovementAllowed)
         {
-            Horizontal = Input.GetAxis("Horizontal") * SprintSpeed;
-            Vertical = Input.GetAxis("Vertical") * Speed;
+            if (InSprint == true)
+            {
+                Horizontal = Input.GetAxis("Horizontal") * SprintSpeed;
+                Vertical = Input.GetAxis("Vertical") * Speed;
+            }
+            else
+            {
+                Horizontal = Input.GetAxis("Horizontal") * Speed;
+                Vertical = Input.GetAxis("Vertical") * Speed;
+            }
         }
-        else
-        {
-            Horizontal = Input.GetAxis("Horizontal") * Speed;
-            Vertical = Input.GetAxis("Vertical") * Speed;
-        }
+        
 
 
         Vector3 MovePosition = transform.right * Horizontal * Speed + transform.forward * Vertical * Speed;
