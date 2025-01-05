@@ -27,15 +27,8 @@ public class FlyController : MonoBehaviour
         
         xRotation = freelookCamera.transform.rotation.eulerAngles.x;
 
-
-       if(Input.GetKey(KeyCode.W))
-       {
         MoveCharacter();
-       } 
-       else
-       {
-        DisableMovent();
-       }
+
 
         transform.position -= new Vector3(0, fallspeed * Time.deltaTime ,0);
 
