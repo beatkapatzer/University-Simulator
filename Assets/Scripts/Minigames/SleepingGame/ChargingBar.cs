@@ -57,18 +57,20 @@ public class ChargingBar : MonoBehaviour
             EndGame(false); // Gracz przegrywa, gdy wskaŸnik osi¹gnie 0
         }
     }
-
+    [SerializeField] GameObject minigame;
     void EndGame(bool playerWon)
     {
         isGameActive = false;
 
         if (playerWon)
         {
-            Debug.Log("You win! Time is up!");
+            Debug.Log("You won!");
+            minigame.SetActive(false);
         }
         else
         {
-            Debug.Log("Game Over! You lost.");
+            Debug.Log("You lose!");
+            minigame.SetActive(false);
         }
 
         // Opcjonalnie: zatrzymaj grê (tylko do debugowania)

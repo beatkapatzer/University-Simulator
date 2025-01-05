@@ -24,7 +24,9 @@ public class PlaneStarter : MonoBehaviour
 
     void PlaneStart()
     {
-        Player.SetActive(false);
+        if(Player != null) 
+            Player.SetActive(false);
+
         Plane.SetActive(true);
 
         Destroy(this.gameObject);
