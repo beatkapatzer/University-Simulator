@@ -26140,7 +26140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeAnimator: {fileID: 249037198}
-  sceneToLoad: EndGame
+  sceneToLoad: Scena 2
 --- !u!65 &761837812
 BoxCollider:
   m_ObjectHideFlags: 0
