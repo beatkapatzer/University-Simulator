@@ -3,8 +3,8 @@ using UnityEngine;
 public class BackgroundMover : MonoBehaviour
 {
     [SerializeField] private  RectTransform background; // Referencja do t³a
-    [SerializeField] private float speed = 50f; // Prêdkoœæ przesuwania
-    [SerializeField] private float moveDistance = 500f; // Maksymalna odleg³oœæ przesuniêcia (poza ekran)
+    [SerializeField] private float speed = 10f; // Prêdkoœæ przesuwania
+    [SerializeField] private float moveDistance = 80f; // Maksymalna odleg³oœæ przesuniêcia (poza ekran)
 
     private Vector2 startPosition; // Pozycja pocz¹tkowa
     private bool movingRight = true; // Kierunek ruchu
