@@ -1,9 +1,9 @@
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
-public class InputOutputField : MonoBehaviour
+public class InputOutput : MonoBehaviour
 {
-    public Text fieldValue;
+    public TMP_Text fieldValue; 
     public int value = -1;
 
     public void SetValue(int newValue)
