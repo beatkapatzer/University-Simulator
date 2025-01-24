@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class CheckButton : MonoBehaviour
 {
-    public InputOutputField[] inputFields;
-    public InputOutputField[] outputFields;
+    public InputOutput[] inputFields;
+    public InputOutput[] outputFields;
 
     public void OnCheckClick()
     {

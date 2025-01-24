@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class NumberButton : MonoBehaviour
 {
-    public InputOutputField[] inputFields; 
+    public InputOutput[] inputFields; 
 
     public void OnNumberClick(int number)
     {

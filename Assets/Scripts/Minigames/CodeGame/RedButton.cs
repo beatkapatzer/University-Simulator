@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ClearButton : MonoBehaviour
 {
-    public InputOutputField[] inputFields;
+    public InputOutput[] inputFields;
 
     public void OnClearClick()
     {

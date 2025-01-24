@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Randomizer : MonoBehaviour
 {
-    public InputOutputField[] outputFields; 
+    public InputOutput[] outputFields; 
 
     void Start()
     {
