@@ -47,18 +47,5 @@ public class PlayerMovement : MonoBehaviour
 
         RB.linearVelocity = NewMovePosition;
 
-        if (Input.GetKey(KeyCode.Space) && IsGrounded)
-        {
-            RB.linearVelocity = new Vector3(RB.linearVelocity.x, JumpForce, RB.linearVelocity.z);
-        }
-
-        if (Input.GetKey(KeyCode.LeftShift) && IsGrounded)
-        {
-            InSprint = true;
-        }
-        else
-        {
-            InSprint = false;
-        }
     }
 }
