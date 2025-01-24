@@ -1,30 +1,22 @@
 using UnityEngine;
+using TMPro; 
 
-public class CheckButton : MonoBehaviour
+public class InputOutput : MonoBehaviour
 {
-    public InputOutputField[] inputFields;
-    public InputOutputField[] outputFields;
+    public TMP_Text fieldValue; 
+    public int value = -1;
 
-    public void OnCheckClick()
+    public void SetValue(int newValue)
     {
-        bool isCorrect = true;
+        value = newValue;
+        fieldValue.text = newValue >= 0 ? newValue.ToString() : "*";
+        fieldValue.color = newValue >= 0 ? Color.black : Color.gray;
+    }
 
-        for (int i = 0; i < inputFields.Length; i++)
-        {
-            if (inputFields[i].value != outputFields[i].value)
-            {
-                isCorrect = false;
-                outputFields[i].fieldValue.color = Color.red;
-            }
-            else
-            {
-                outputFields[i].fieldValue.color = Color.green;
-            }
-        }
-
-        if (isCorrect)
-        {
-            Debug.Log("Konto zosta³o zhakowane poprawnie!");
-        }
+    public void ClearValue()
+    {
+        value = -1;
+        fieldValue.text = "*";
+        fieldValue.color = Color.gray;
     }
 }
